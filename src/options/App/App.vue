@@ -40,10 +40,17 @@ export default {
       this.list.splice(i, 1)
     },
     save () {
-      chrome.storage.sync.set({options: this.list}, function() {
+      chrome.storage.sync.set({proxyOption: this.list}, function() {
         Message.success('保存成功!')
+        chrome.extension.getBackgroundPage().background()
       })
     }
+  },
+  created () {
+    let that = this
+    chrome.storage.sync.get(['proxyOption'], function(opts) {
+      if (opts.proxyOption) that.list = opts.proxyOption
+    })
   }
 }
 </script>
