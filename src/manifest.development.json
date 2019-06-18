@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "happy",
+  "description": "a test extension of happy",
+  "version": "0.0.1",
+  "options_page": "options.html",
+  "background": { "scripts": ["background.js"] },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "notifications",
+    "tabs",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
