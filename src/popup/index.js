@@ -5,9 +5,10 @@ Vue.component("app-component", AppComponent);
 
 import {
   Switch,
-  Button
+  Button,
+  Icon
 } from 'element-ui';
-Vue.use(Switch).use(Button);
+Vue.use(Switch).use(Button).use(Icon);
 
 new Vue({
   el: "#app",

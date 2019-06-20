@@ -16,7 +16,7 @@ function proxy (options) {
           return { redirectUrl: opt.target + url.split(opt.api)[1] }
         }
       }
-  
+
       return {cancel: false}
     },
     {urls: ["<all_urls>"]},
