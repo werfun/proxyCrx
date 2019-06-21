@@ -20,6 +20,7 @@
         <el-button @click="save" size="mini" type="success">保存</el-button>
       </el-col>
     </el-row>
+    <div class="adr">ps:在线招租广告位~</div>
   </div>
 </template>
 
@@ -70,5 +71,15 @@ export default {
 }
 .row {
   margin: 15px 0;
+}
+.adr {
+  border: 1px solid #333;
+  width: 300px; 
+  height: 100px;
+  margin-top: 100px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>

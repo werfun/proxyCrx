@@ -43,14 +43,15 @@ export default {
 }
 span {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .row {
-  padding: 5px 10px;
+  padding: 5px 0;
   cursor: pointer;
 }
-.setting {
-  margin: 0 20px;
+i {
+  font-size: 16px;
+  transform: translate(1px, 1px)
 }
 </style>
 
