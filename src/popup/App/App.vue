@@ -49,6 +49,9 @@ span {
   padding: 5px 0;
   cursor: pointer;
 }
+.row:hover {
+  background-color: #D4D4D4;
+}
 i {
   font-size: 16px;
   transform: translate(1px, 1px)

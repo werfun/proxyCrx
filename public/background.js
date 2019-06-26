@@ -15,7 +15,8 @@ function callback (details) {
   if (options) {
     for (let i = 0; i < options.length; i++) {
       let opt = options[i]
-      if (!opt.api || !opt.target) continue
+      // options请求重定向会跨域报错
+      if (!opt.api || !opt.target || details.method.toLowerCase() === 'options') continue
       if (url.indexOf(opt.api) > -1) {
         return { redirectUrl: opt.target + url.split(opt.api)[1] }
       }
@@ -31,7 +32,6 @@ function proxy () {
     {urls: ["<all_urls>"]},
     ["blocking"]
   )
-  // alert(chrome.webRequest.onBeforeRequest.hasListeners())
 }
 
 function stopProxy () {
